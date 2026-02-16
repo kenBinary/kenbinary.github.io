@@ -1,5 +1,217 @@
 @import "tailwindcss";
 
+@theme {
+  --font-hack-mono: "Hack Nerd Font Mono", monospace;
+
+  --color-nord-0-base: #2e3440;
+  --color-nord-0-50: #f6f7f9;
+  --color-nord-0-100: #eceef2;
+  --color-nord-0-200: #d5dae2;
+  --color-nord-0-300: #b0bac9;
+  --color-nord-0-400: #8494ac;
+  --color-nord-0-500: #657792;
+  --color-nord-0-600: #505f79;
+  --color-nord-0-700: #424d62;
+  --color-nord-0-800: #394253;
+  --color-nord-0-900: #2e3440;
+  --color-nord-0-950: #22262f;
+
+  --color-nord-1-base: #3b4252;
+  --color-nord-1-50: #f6f7f9;
+  --color-nord-1-100: #eceef2;
+  --color-nord-1-200: #d5d8e2;
+  --color-nord-1-300: #b1b9c8;
+  --color-nord-1-400: #8793a9;
+  --color-nord-1-500: #68758f;
+  --color-nord-1-600: #535e76;
+  --color-nord-1-700: #444c60;
+  --color-nord-1-800: #3b4252;
+  --color-nord-1-900: #343946;
+  --color-nord-1-950: #23262e;
+
+  --color-nord-2-base: #434c5e;
+  --color-nord-2-50: #f6f7f9;
+  --color-nord-2-100: #eceef2;
+  --color-nord-2-200: #d6dae1;
+  --color-nord-2-300: #b1b9c8;
+  --color-nord-2-400: #8793a9;
+  --color-nord-2-500: #68778f;
+  --color-nord-2-600: #535f76;
+  --color-nord-2-700: #434c5e;
+  --color-nord-2-800: #3b4251;
+  --color-nord-2-900: #343946;
+  --color-nord-2-950: #23272e;
+
+  --color-nord-3-base: #4c566a;
+  --color-nord-3-50: #f6f7f9;
+  --color-nord-3-100: #eceef2;
+  --color-nord-3-200: #d6dae1;
+  --color-nord-3-300: #b2b9c7;
+  --color-nord-3-400: #8894a8;
+  --color-nord-3-500: #69778e;
+  --color-nord-3-600: #546075;
+  --color-nord-3-700: #4c566a;
+  --color-nord-3-800: #3b4251;
+  --color-nord-3-900: #353a45;
+  --color-nord-3-950: #23272e;
+
+  --color-nord-4-base: #d8dee9;
+  --color-nord-4-50: #f4f6f9;
+  --color-nord-4-100: #ebeef4;
+  --color-nord-4-200: #d8dee9;
+  --color-nord-4-300: #c4ccdd;
+  --color-nord-4-400: #abb3ce;
+  --color-nord-4-500: #959cbf;
+  --color-nord-4-600: #7f84ac;
+  --color-nord-4-700: #6c6f96;
+  --color-nord-4-800: #595c7a;
+  --color-nord-4-900: #4c5063;
+  --color-nord-4-950: #2c2d3a;
+
+  --color-nord-5-base: #e5e9f0;
+  --color-nord-5-50: #f5f7f9;
+  --color-nord-5-100: #e5e9f0;
+  --color-nord-5-200: #d6dde7;
+  --color-nord-5-300: #b9c5d7;
+  --color-nord-5-400: #97a8c3;
+  --color-nord-5-500: #7e8fb3;
+  --color-nord-5-600: #6c7aa4;
+  --color-nord-5-700: #606b95;
+  --color-nord-5-800: #52597b;
+  --color-nord-5-900: #454b63;
+  --color-nord-5-950: #2d303e;
+
+  --color-nord-6-base: #eceff4;
+  --color-nord-6-50: #f5f7f9;
+  --color-nord-6-100: #eceff4;
+  --color-nord-6-200: #d6dde7;
+  --color-nord-6-300: #b9c5d7;
+  --color-nord-6-400: #97a9c3;
+  --color-nord-6-500: #7e8fb3;
+  --color-nord-6-600: #6c7ba4;
+  --color-nord-6-700: #606b95;
+  --color-nord-6-800: #525a7b;
+  --color-nord-6-900: #454b63;
+  --color-nord-6-950: #2d303e;
+
+  --color-nord-7-base: #8fbcbb;
+  --color-nord-7-50: #f3f8f7;
+  --color-nord-7-100: #e0edec;
+  --color-nord-7-200: #c5dcdb;
+  --color-nord-7-300: #8fbcbb;
+  --color-nord-7-400: #6ca4a4;
+  --color-nord-7-500: #518989;
+  --color-nord-7-600: #467174;
+  --color-nord-7-700: #3d5e61;
+  --color-nord-7-800: #385052;
+  --color-nord-7-900: #324447;
+  --color-nord-7-950: #1e2c2e;
+
+  --color-nord-8-base: #88c0d0;
+  --color-nord-8-50: #f4f9fb;
+  --color-nord-8-100: #e8f1f6;
+  --color-nord-8-200: #cce3eb;
+  --color-nord-8-300: #88c0d0;
+  --color-nord-8-400: #6cb2c4;
+  --color-nord-8-500: #4a98ad;
+  --color-nord-8-600: #387c91;
+  --color-nord-8-700: #2e6376;
+  --color-nord-8-800: #295563;
+  --color-nord-8-900: #274753;
+  --color-nord-8-950: #1a2e37;
+
+  --color-nord-9-base: #81a1c1;
+  --color-nord-9-50: #f4f8fa;
+  --color-nord-9-100: #e6eef3;
+  --color-nord-9-200: #d3e0ea;
+  --color-nord-9-300: #b4ccdc;
+  --color-nord-9-400: #90b1ca;
+  --color-nord-9-500: #81a1c1;
+  --color-nord-9-600: #6383ad;
+  --color-nord-9-700: #58729d;
+  --color-nord-9-800: #4b5f82;
+  --color-nord-9-900: #404f68;
+  --color-nord-9-950: #2a3241;
+
+  --color-nord-10-base: #5e81ac;
+  --color-nord-10-50: #f4f8fa;
+  --color-nord-10-100: #e6eef3;
+  --color-nord-10-200: #d2e0eb;
+  --color-nord-10-300: #b4ccdc;
+  --color-nord-10-400: #8fb2cb;
+  --color-nord-10-500: #759abc;
+  --color-nord-10-600: #5e81ac;
+  --color-nord-10-700: #57739e;
+  --color-nord-10-800: #4b5f82;
+  --color-nord-10-900: #3f5069;
+  --color-nord-10-950: #2a3241;
+
+  --color-nord-11-base: #bf616a;
+  --color-nord-11-50: #fbf5f5;
+  --color-nord-11-100: #f8ebeb;
+  --color-nord-11-200: #f1dadb;
+  --color-nord-11-300: #e6bbbe;
+  --color-nord-11-400: #d7959a;
+  --color-nord-11-500: #bf616a;
+  --color-nord-11-600: #ae505e;
+  --color-nord-11-700: #913f4d;
+  --color-nord-11-800: #7a3745;
+  --color-nord-11-900: #69323f;
+  --color-nord-11-950: #39181f;
+
+  --color-nord-12-base: #d08770;
+  --color-nord-12-50: #fcf6f4;
+  --color-nord-12-100: #f8ece8;
+  --color-nord-12-200: #f4dcd4;
+  --color-nord-12-300: #ebc3b6;
+  --color-nord-12-400: #dd9f8c;
+  --color-nord-12-500: #d08770;
+  --color-nord-12-600: #b8644a;
+  --color-nord-12-700: #9a523b;
+  --color-nord-12-800: #804634;
+  --color-nord-12-900: #6b3f31;
+  --color-nord-12-950: #391e16;
+
+  --color-nord-13-base: #ebcb8b;
+  --color-nord-13-50: #fdf9ef;
+  --color-nord-13-100: #f9f1db;
+  --color-nord-13-200: #f3e0b5;
+  --color-nord-13-300: #ebcb8b;
+  --color-nord-13-400: #e1ab56;
+  --color-nord-13-500: #da9335;
+  --color-nord-13-600: #cc7b2a;
+  --color-nord-13-700: #a96025;
+  --color-nord-13-800: #874c25;
+  --color-nord-13-900: #6e4020;
+  --color-nord-13-950: #3b200f;
+
+  --color-nord-14-base: #a3be8c;
+  --color-nord-14-50: #f7f9f4;
+  --color-nord-14-100: #ecf2e6;
+  --color-nord-14-200: #d9e5cd;
+  --color-nord-14-300: #b8d0a5;
+  --color-nord-14-400: #a3be8c;
+  --color-nord-14-500: #719453;
+  --color-nord-14-600: #5a7940;
+  --color-nord-14-700: #486035;
+  --color-nord-14-800: #3c4d2e;
+  --color-nord-14-900: #324027;
+  --color-nord-14-950: #182211;
+
+  --color-nord-15-base: #b48ead;
+  --color-nord-15-50: #f9f6f9;
+  --color-nord-15-100: #f4eff4;
+  --color-nord-15-200: #eae0e9;
+  --color-nord-15-300: #dbc6d8;
+  --color-nord-15-400: #c3a3be;
+  --color-nord-15-500: #b48ead;
+  --color-nord-15-600: #976b8d;
+  --color-nord-15-700: #805676;
+  --color-nord-15-800: #6b4962;
+  --color-nord-15-900: #5b4054;
+  --color-nord-15-950: #352230;
+}
+
 /*
  * Hack Nerd Font Family
  * Font: Hack Nerd
