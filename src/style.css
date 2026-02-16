@@ -108,6 +108,25 @@ main {
   }
 }
 
+#project-nav {
+  ul {
+    margin: 0px;
+    list-style-type: none;
+    padding-left: 0rem;
+
+    li {
+      font-size: 0.9rem;
+      cursor: pointer;
+      padding: 0.2rem;
+
+      &:hover {
+        color: var(--nord7);
+        background-color: var(--nord3);
+      }
+    }
+  }
+}
+
 #content-section {
   border: 1px solid var(--nord3);
   padding: 0.5rem;
