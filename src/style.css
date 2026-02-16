@@ -63,7 +63,7 @@ body {
 main {
   height: 100%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 4fr 1fr;
   gap: 1rem;
   padding: 1rem;
 }
@@ -71,13 +71,34 @@ main {
 #nav-section {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
 
-  div {
+  > div {
     border: 1px solid var(--nord3);
-    padding: 0.5rem;
+    padding: 0.75rem;
     position: relative;
     color: var(--nord4);
+
+    &:hover {
+      border-color: var(--nord9);
+    }
+
+    .nav-label {
+      font-weight: bold;
+      font-size: 0.8rem;
+      background-color: var(--nord0);
+      position: absolute;
+      top: -0.5rem;
+      left: 1rem;
+    }
+    .nav-position {
+      font-style: italic;
+      font-size: 0.7rem;
+      position: absolute;
+      background-color: var(--nord0);
+      right: 1rem;
+      bottom: -0.5rem;
+    }
   }
 }
 
