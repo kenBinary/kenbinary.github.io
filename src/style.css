@@ -127,6 +127,12 @@ main {
   }
 }
 
+#skills-nav {
+  div {
+    font-size: 0.9rem;
+  }
+}
+
 #content-section {
   border: 1px solid var(--nord3);
   padding: 0.5rem;
