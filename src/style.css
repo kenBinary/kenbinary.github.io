@@ -109,6 +109,7 @@ main {
 }
 
 #project-nav {
+  flex-grow: 1;
   ul {
     margin: 0px;
     list-style-type: none;
