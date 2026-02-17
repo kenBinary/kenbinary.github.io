@@ -331,6 +331,42 @@ main {
   }
 }
 
+#contact-content {
+  table {
+    font-size: 0.9rem;
+    width: 100%;
+    border-collapse: collapse;
+
+    th,
+    td {
+      border: 1px solid var(--nord3);
+      padding: 0.5rem;
+      text-align: left;
+      color: var(--nord4);
+    }
+
+    th {
+      background-color: var(--nord2);
+      color: var(--nord6);
+    }
+
+    tr:hover {
+      background-color: var(--nord3);
+    }
+
+    td {
+      a {
+        color: var(--nord7);
+        font-weight: bold;
+
+        &:hover {
+          color: var(--nord10);
+        }
+      }
+    }
+  }
+}
+
 #process-section {
   display: flex;
   flex-direction: column;
