@@ -54,6 +54,29 @@
   font-style: italic;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+
+  &-track {
+    background: var(--nord0);
+  }
+
+  &-thumb {
+    background: var(--nord3);
+    border-radius: 4px;
+
+    &:hover {
+      background: var(--nord8);
+    }
+  }
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--nord3) var(--nord0);
+}
+
 body {
   font-family: "Hack Nerd Font Mono", monospace;
   height: 100dvh;
@@ -160,7 +183,6 @@ footer {
 }
 
 #content-section {
-  /* todo: add better scroll styling */
   height: 100%;
   overflow-y: auto;
   border: 1px solid var(--nord3);
