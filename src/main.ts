@@ -2,6 +2,7 @@ import {
   NavigationOptionContentIds,
   type NavigationOptionId,
 } from "./enums/nav.enums";
+import { setupSkills } from "./skills";
 
 async function generateQuote() {
   const quoteContainer = document.getElementById("quote-container");
@@ -27,6 +28,7 @@ async function generateQuote() {
 }
 
 await generateQuote();
+setupSkills();
 
 const navOptions = document.querySelectorAll(".nav-option");
 const contentSections = document.querySelectorAll(".content");

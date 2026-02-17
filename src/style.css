@@ -206,6 +206,131 @@ main {
   }
 }
 
+#skills-content {
+  .skills-category-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  .skills-category {
+    border: 1px solid var(--nord3);
+    position: relative;
+
+    .skill-category-label {
+      font-weight: bold;
+      font-size: 0.8rem;
+      position: absolute;
+      top: -0.5rem;
+      left: 0.5rem;
+      background-color: var(--nord0);
+      color: var(--nord7);
+    }
+
+    &:hover {
+      border-color: var(--nord10);
+
+      .skill-category-label {
+        color: var(--nord10);
+      }
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+
+      li {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+        font-size: 0.9rem;
+        cursor: pointer;
+
+        &:hover {
+          color: var(--nord7);
+          background-color: var(--nord3);
+
+          :nth-child(1)::before {
+            content: "➤";
+            color: var(--nord7);
+            margin-right: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  #skill-details {
+    position: relative;
+    display: flex;
+    border: 1px solid var(--nord3);
+    margin-top: 1rem;
+    padding: 0.5rem;
+
+    #skill-details-label {
+      position: absolute;
+      top: -0.5rem;
+      font-size: 0.8rem;
+      font-weight: bold;
+      left: 0.5rem;
+      background-color: var(--nord0);
+      color: var(--nord7);
+    }
+
+    #skill-overview {
+      border-right: 1px dashed var(--nord3);
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.2rem;
+      flex-basis: min-content;
+      padding: 1rem 4rem;
+
+      :nth-child(1) {
+        margin: 0px;
+        font-weight: bold;
+        font-size: 2.5rem;
+        color: var(--nord15);
+      }
+      :nth-child(2) {
+        margin: 0px;
+        font-size: 0.8rem;
+        font-style: italic;
+        color: var(--nord13);
+      }
+      :nth-child(3) {
+        border: 1px solid var(--nord12);
+        padding: 0.2rem;
+        font-weight: bold;
+        font-size: 0.7rem;
+        color: var(--nord12);
+      }
+    }
+
+    #skill-description {
+      margin-left: 1rem;
+      font-size: 0.9rem;
+
+      p {
+        color: var(--nord8);
+
+        span {
+          color: var(--nord14);
+          font-weight: bold;
+        }
+      }
+
+      p:nth-child(3) {
+        border-left: 2px solid var(--nord15);
+        padding-left: 0.5rem;
+      }
+    }
+  }
+}
+
 #process-section {
   display: flex;
   flex-direction: column;

@@ -1,0 +1,225 @@
+[
+    {
+        "category": "Languages",
+        "skills": [
+            {
+                "name": "TypeScript",
+                "category": "Languages",
+                "shortDescription": "Strict syntactical superset of JavaScript",
+                "proficiency": "Comfortable With",
+                "hexNumber": "0x7F3A91"
+            },
+            {
+                "name": "JavaScript",
+                "category": "Languages",
+                "shortDescription": "High-level programming language",
+                "proficiency": "Comfortable With",
+                "hexNumber": "0xF7DF1E"
+            },
+            {
+                "name": "Python",
+                "category": "Languages",
+                "shortDescription": "Versatile, easy-to-read programming language",
+                "proficiency": "Comfortable With",
+                "hexNumber": "0x3776AB"
+            },
+            {
+                "name": "C#",
+                "category": "Languages",
+                "shortDescription": "Modern, object-oriented language for diverse applications",
+                "proficiency": "Comfortable With",
+                "hexNumber": "0x512BD4"
+            },
+            {
+                "name": "HTML",
+                "category": "Languages",
+                "shortDescription": "Foundation of web page structure",
+                "proficiency": "Comfortable With",
+                "hexNumber": "0xE34F26"
+            },
+            {
+                "name": "CSS",
+                "category": "Languages",
+                "shortDescription": "Styling and layout for web pages",
+                "proficiency": "Comfortable With",
+                "hexNumber": "0x1572B6"
+            },
+            {
+                "name": "Java",
+                "category": "Languages",
+                "shortDescription": "Robust, platform-independent programming language",
+                "proficiency": "Comfortable With",
+                "hexNumber": "0x007396"
+            },
+            {
+                "name": "PHP",
+                "category": "Languages",
+                "shortDescription": "Widely-used server-side scripting language",
+                "proficiency": "Comfortable With",
+                "hexNumber": "0x4F5B93"
+            }
+        ]
+    },
+    {
+        "category": "Frameworks & Libraries",
+        "skills": [
+            {
+                "name": "React",
+                "category": "Frameworks & Libraries",
+                "shortDescription": "JavaScript library for building user interfaces",
+                "proficiency": "Comfortable With",
+                "hexNumber": "0x61DAFB"
+            },
+            {
+                "name": "Express",
+                "category": "Frameworks & Libraries",
+                "shortDescription": "Minimalist web framework for Node.js",
+                "proficiency": "Comfortable With",
+                "hexNumber": "0x000000"
+            },
+            {
+                "name": "Node.js (Runtime)",
+                "category": "Frameworks & Libraries",
+                "shortDescription": "JavaScript runtime environment",
+                "proficiency": "Comfortable With",
+                "hexNumber": "0x339933"
+            },
+            {
+                "name": "Tailwind CSS",
+                "category": "Frameworks & Libraries",
+                "shortDescription": "Utility-first CSS framework",
+                "proficiency": "Comfortable With",
+                "hexNumber": "0x38B2AC"
+            },
+            {
+                "name": "ASP.NET",
+                "category": "Frameworks & Libraries",
+                "shortDescription": "Framework for building cross-platform web applications",
+                "proficiency": "Comfortable With",
+                "hexNumber": "0x512BD4"
+            },
+            {
+                "name": "FastAPI",
+                "category": "Frameworks & Libraries",
+                "shortDescription": "Modern, high-performance Python API framework",
+                "proficiency": "Building & Growing",
+                "hexNumber": "0x00C58E"
+            },
+            {
+                "name": "Flutter",
+                "category": "Frameworks & Libraries",
+                "shortDescription": "UI toolkit for building native cross-platform apps",
+                "proficiency": "Building & Growing",
+                "hexNumber": "0x02569B"
+            },
+            {
+                "name": "Selenium",
+                "category": "Frameworks & Libraries",
+                "shortDescription": "Automated browser testing and interaction",
+                "proficiency": "Building & Growing",
+                "hexNumber": "0x43B02A"
+            },
+            {
+                "name": "Angular",
+                "category": "Frameworks & Libraries",
+                "shortDescription": "Comprehensive web application platform",
+                "proficiency": "Comfortable With",
+                "hexNumber": "0xDD0031"
+            }
+        ]
+    },
+    {
+        "category": "Databases",
+        "skills": [
+            {
+                "name": "MongoDB",
+                "category": "Databases",
+                "shortDescription": "Scalable, document-based NoSQL database",
+                "proficiency": "Comfortable With",
+                "hexNumber": "0x47A248"
+            },
+            {
+                "name": "PostgreSQL",
+                "category": "Databases",
+                "shortDescription": "Advanced open-source relational database",
+                "proficiency": "Building & Growing",
+                "hexNumber": "0x336791"
+            },
+            {
+                "name": "MySQL",
+                "category": "Databases",
+                "shortDescription": "Reliable and popular relational database",
+                "proficiency": "Comfortable With",
+                "hexNumber": "0x4479A1"
+            },
+            {
+                "name": "SQLite",
+                "category": "Databases",
+                "shortDescription": "Lightweight, file-based database engine",
+                "proficiency": "Comfortable With",
+                "hexNumber": "0x0078D4"
+            },
+            {
+                "name": "SQL Server",
+                "category": "Databases",
+                "shortDescription": "Microsoft's enterprise relational database",
+                "proficiency": "Comfortable With",
+                "hexNumber": "0xCC2927"
+            },
+            {
+                "name": "Redis",
+                "category": "Databases",
+                "shortDescription": "In-memory data structure store for caching and messaging",
+                "proficiency": "Comfortable With",
+                "hexNumber": "0xDC382D"
+            }
+        ]
+    },
+    {
+        "category": "Tools & Others",
+        "skills": [
+            {
+                "name": "Git",
+                "category": "Tools & Others",
+                "shortDescription": "Efficient distributed version control",
+                "proficiency": "Comfortable With",
+                "hexNumber": "0xF05032"
+            },
+            {
+                "name": "Docker",
+                "category": "Tools & Others",
+                "shortDescription": "Platform for containerizing applications",
+                "proficiency": "Building & Growing",
+                "hexNumber": "0x2496ED"
+            },
+            {
+                "name": "Firebase",
+                "category": "Tools & Others",
+                "shortDescription": "Platform for mobile and web app development",
+                "proficiency": "Building & Growing",
+                "hexNumber": "0xFFCA28"
+            },
+            {
+                "name": "Nginx",
+                "category": "Tools & Others",
+                "shortDescription": "High-performance web server and reverse proxy",
+                "proficiency": "Building & Growing",
+                "hexNumber": "0x009639"
+            },
+            {
+                "name": "Vite",
+                "category": "Tools & Others",
+                "shortDescription": "Fast frontend development tool and bundler",
+                "proficiency": "Comfortable With",
+                "hexNumber": "0x646CFF"
+            },
+            {
+                "name": "Google Cloud Platform",
+                "category": "Tools & Others",
+                "shortDescription": "Scalable cloud computing services",
+                "proficiency": "Expanding Skills",
+                "hexNumber": "0x4285F4"
+            }
+        ]
+    }
+]
