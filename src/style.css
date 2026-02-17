@@ -157,11 +157,12 @@ main {
   display: none;
 }
 
-#home-content {
-  pre {
-    font-size: 0.9rem;
-  }
+.ascii-header {
+  font-size: 0.9rem;
+  color: var(--nord8);
+}
 
+#home-content {
   ul {
     list-style-type: "*";
     padding-left: 0.5rem;
