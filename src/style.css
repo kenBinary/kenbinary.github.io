@@ -480,7 +480,7 @@ main {
   flex-direction: column;
   gap: 0.5rem;
 
-  div {
+  > div {
     border: 1px solid var(--nord3);
     padding: 0.5rem;
     position: relative;
@@ -490,6 +490,68 @@ main {
   #spotify-widget {
     > img {
       min-height: 100px;
+    }
+  }
+
+  #experience-widget {
+    > div:nth-child(1) {
+      display: flex;
+      color: var(--nord3);
+      gap: 0.5rem;
+      font-size: 0.8rem;
+
+      > div {
+        border-bottom: 1px solid var(--nord3);
+        flex-grow: 1;
+        height: 1px;
+        justify-self: end;
+        align-self: center;
+      }
+    }
+
+    p {
+      margin: 0px;
+    }
+
+    #current-time {
+      color: var(--nord14);
+      font-size: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    #current-date {
+      color: var(--nord3);
+      font-size: 0.8rem;
+    }
+
+    > ul {
+      list-style: none;
+      padding-left: 0;
+      font-size: 0.8rem;
+
+      > li {
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+
+        span {
+          color: var(--nord11);
+          font-weight: bold;
+        }
+
+        .experience-info {
+          flex-grow: 1;
+          > div {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: space-between;
+          }
+
+          > p {
+            font-size: 0.6rem;
+          }
+        }
+      }
     }
   }
 }

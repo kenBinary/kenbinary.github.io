@@ -68,3 +68,35 @@ window.addEventListener("keydown", (e) => {
     handleNavigation(navOptionId);
   }
 });
+
+const currentTimeElement = document.getElementById("current-time");
+const currentDateElement = document.getElementById("current-date");
+const dateNow = new Date();
+currentDateElement!.textContent = dateNow
+  .toLocaleDateString("en-CA", {
+    weekday: "short",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  })
+  .toUpperCase()
+  .replace(/,/g, "");
+
+function updateTime() {
+  const now = new Date();
+
+  const timeString = now.toLocaleTimeString("en-GB", {
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false,
+  });
+
+  if (currentTimeElement) {
+    currentTimeElement.textContent = timeString;
+  }
+
+  setTimeout(updateTime, 1000);
+}
+
+updateTime();
