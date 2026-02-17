@@ -149,6 +149,14 @@ main {
   color: var(--nord4);
 }
 
+.active-content {
+  display: block;
+}
+
+.inactive-content {
+  display: none;
+}
+
 #home-content {
   pre {
     font-size: 0.9rem;
