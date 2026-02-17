@@ -25,15 +25,20 @@ export function setupProjects() {
     if (title) title.textContent = project.name;
     if (description) description.textContent = project.description;
 
-    // TODO: fix when image is mobile
     if (imageContainer) {
       const isVideo =
         project.imageUrl.endsWith(".webm") || project.imageUrl.endsWith(".mp4");
+      const isMobileImage = project.isMobileImage;
+
+      imageContainer.classList.toggle(
+        "project-image-container-mobile",
+        isMobileImage,
+      );
 
       if (isVideo) {
-        imageContainer.innerHTML = `<video src="${project.imageUrl}" autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover;"></video>`;
+        imageContainer.innerHTML = `<video src="${project.imageUrl}" autoplay loop muted playsinline"></video>`;
       } else {
-        imageContainer.innerHTML = `<img src="${project.imageUrl}" alt="${project.name}" style="width: 100%; height: 100%; object-fit: cover;" />`;
+        imageContainer.innerHTML = `<img src="${project.imageUrl}" alt="${project.name}"" />`;
       }
     }
 
