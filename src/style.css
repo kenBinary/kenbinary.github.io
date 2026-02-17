@@ -486,4 +486,10 @@ main {
     position: relative;
     color: var(--nord4);
   }
+
+  #spotify-widget {
+    > img {
+      min-height: 100px;
+    }
+  }
 }
