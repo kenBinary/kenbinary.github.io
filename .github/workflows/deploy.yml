@@ -29,23 +29,38 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
+
+      # 1. Install pnpm (Required before setup-node)
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9 # Specify your pnpm version here
+
+      # 2. Update Node setup to cache pnpm
       - name: Set up Node
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v4
         with:
           node-version: lts/*
-          cache: "npm"
+          cache: "pnpm"
+
+      # 3. Use pnpm install (automatically handles frozen-lockfile in CI)
       - name: Install dependencies
-        run: npm ci
+        run: pnpm install
+
+      # 4. Use pnpm build
       - name: Build
-        run: npm run build
+        run: pnpm build
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
           # Upload dist folder
           path: "./dist"
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
