@@ -231,11 +231,40 @@ footer {
 
   #quote-container {
     #quote {
+      min-height: 75px;
       border: 1px dashed var(--nord3);
       padding: 1rem;
       font-style: italic;
       color: var(--nord6);
       margin-top: 1rem;
+    }
+
+    .skeleton {
+      background: linear-gradient(
+        90deg,
+        var(--nord1) 25%,
+        var(--nord2) 50%,
+        var(--nord1) 75%
+      );
+      background-size: 200% 100%;
+      animation: skeleton-loading 1.5s infinite;
+      border-radius: 4px;
+      display: block;
+    }
+
+    .skeleton-text {
+      height: 1rem;
+      margin-bottom: 0.5rem;
+      width: 100%;
+    }
+  }
+
+  @keyframes skeleton-loading {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
     }
   }
 
