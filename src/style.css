@@ -141,6 +141,9 @@ main {
 }
 
 #content-section {
+  /* todo: add better scroll styling */
+  height: 100%;
+  overflow-y: auto;
   border: 1px solid var(--nord3);
   padding: 0.5rem;
   color: var(--nord4);
