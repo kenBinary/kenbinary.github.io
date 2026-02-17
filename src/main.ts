@@ -3,6 +3,7 @@ import {
   type NavigationOptionId,
 } from "./enums/nav.enums";
 import { setupSkills } from "./skills";
+import { setupProjects } from "./projects";
 
 async function generateQuote() {
   const quoteContainer = document.getElementById("quote-container");
@@ -29,6 +30,7 @@ async function generateQuote() {
 
 await generateQuote();
 setupSkills();
+setupProjects();
 
 const navOptions = document.querySelectorAll(".nav-option");
 const contentSections = document.querySelectorAll(".content");
