@@ -146,6 +146,54 @@ main {
   color: var(--nord4);
 }
 
+#home-content {
+  pre {
+    font-size: 0.9rem;
+  }
+
+  ul {
+    list-style-type: "*";
+    padding-left: 0.5rem;
+
+    #name-intro {
+      font-weight: bold;
+      color: var(--nord8);
+    }
+
+    li {
+      padding-left: 0.5rem;
+
+      &::marker {
+        color: var(--nord11);
+        font-weight: bold;
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  #quote-container {
+    #quote {
+      border: 1px dashed var(--nord3);
+      padding: 1rem;
+      font-style: italic;
+      color: var(--nord6);
+      margin-top: 1rem;
+    }
+  }
+
+  #galaxy-ascii-art {
+    text-align: center;
+    font-size: 0.7rem;
+    color: var(--nord7);
+  }
+
+  #nav-hint {
+    font-size: 0.8rem;
+    font-style: italic;
+    color: var(--nord6);
+  }
+}
+
 #process-section {
   display: flex;
   flex-direction: column;
