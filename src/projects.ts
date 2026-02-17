@@ -3,9 +3,11 @@ import type { Project } from "./types/projects";
 
 export function setupProjects() {
   const projectList = document.querySelector("#project-nav ul");
+  const projectListMobile = document.querySelector("#project-nav-mobile ul");
+  console.log(projectListMobile);
   const projectContent = document.getElementById("project-content");
 
-  if (!projectList || !projectContent) return;
+  if (!projectList || !projectContent || !projectListMobile) return;
 
   const updateProjectContent = (project: Project) => {
     const hash = projectContent.querySelector(".project-hash");
@@ -77,21 +79,32 @@ export function setupProjects() {
   };
 
   projectList.innerHTML = "";
+  projectListMobile.innerHTML = "";
 
   projectsData.forEach((project: Project) => {
-    const li = document.createElement("li");
-    li.textContent = project.name;
-    li.addEventListener("click", () => {
-      updateProjectContent(project);
+    const createListItem = () => {
+      const li = document.createElement("li");
+      li.textContent = project.name;
 
-      projectList.querySelectorAll("li").forEach((item) => {
-        item.style.color = "";
-        item.style.backgroundColor = "";
+      li.addEventListener("click", () => {
+        updateProjectContent(project);
+
+        [projectList, projectListMobile].forEach((list) => {
+          list.querySelectorAll("li").forEach((item) => {
+            item.style.color = "";
+            item.style.backgroundColor = "";
+          });
+        });
+
+        li.style.color = "var(--nord7)";
+        li.style.backgroundColor = "var(--nord3)";
       });
-      li.style.color = "var(--nord7)";
-      li.style.backgroundColor = "var(--nord3)";
-    });
-    projectList.appendChild(li);
+
+      return li;
+    };
+
+    projectList.appendChild(createListItem());
+    projectListMobile.appendChild(createListItem());
   });
 
   if (projectsData.length > 0) {
@@ -102,6 +115,12 @@ export function setupProjects() {
     if (firstLi) {
       firstLi.style.color = "var(--nord7)";
       firstLi.style.backgroundColor = "var(--nord3)";
+    }
+
+    const firstMobileLi = projectListMobile.querySelector("li");
+    if (firstMobileLi) {
+      firstMobileLi.style.color = "var(--nord7)";
+      firstMobileLi.style.backgroundColor = "var(--nord3)";
     }
   }
 }

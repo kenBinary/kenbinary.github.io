@@ -100,3 +100,14 @@ function updateTime() {
 }
 
 updateTime();
+
+const projectNavMobile = document.getElementById(
+  "project-nav-mobile",
+) as HTMLDivElement;
+const mobileProjectList = document.querySelector(
+  ".mobile-project-list",
+) as HTMLUListElement;
+
+projectNavMobile.addEventListener("click", () => {
+  mobileProjectList.classList.toggle("mobile-project-list-visible");
+});

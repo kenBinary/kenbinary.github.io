@@ -81,6 +81,10 @@ body {
   font-family: "Hack Nerd Font Mono", monospace;
   height: 100dvh;
   background-color: var(--nord0);
+
+  @media (max-width: 1024px) {
+    height: auto;
+  }
 }
 
 main {
@@ -89,11 +93,21 @@ main {
   grid-template-columns: 1fr 4fr 1fr;
   gap: 1rem;
   padding: 1rem;
+
+  @media (max-width: 1024px) {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 footer {
   height: 1%;
   padding: 0rem 1rem;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
 
   > div {
     display: flex;
@@ -115,6 +129,36 @@ footer {
   flex-direction: column;
   gap: 1rem;
 
+  @media (max-width: 1024px) {
+    flex-direction: row;
+    top: 0;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    z-index: 9999;
+    background-color: var(--nord0);
+    position: sticky;
+
+    > div {
+      :not(
+        .nav-label,
+        .nav-position,
+        .mobile-project-list,
+        .mobile-project-list li
+      ) {
+        display: none;
+      }
+
+      display: flex;
+      justify-content: space-between;
+      flex-grow: 1;
+    }
+  }
+
+  @media (max-width: 640px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
   > div {
     border: 1px solid var(--nord3);
     padding: 0.75rem;
@@ -132,6 +176,10 @@ footer {
       position: absolute;
       top: -0.5rem;
       left: 1rem;
+
+      @media (max-width: 1024px) {
+        position: static;
+      }
     }
     .nav-position {
       font-style: italic;
@@ -140,25 +188,34 @@ footer {
       background-color: var(--nord0);
       right: 1rem;
       bottom: -0.5rem;
+
+      @media (max-width: 1024px) {
+        position: static;
+      }
     }
   }
 }
 
 #home-nav {
   div {
-    font-size: 0.9rem;
+    font-size: clamp(0.4rem, 0.9rem, 0.9vw);
   }
 }
 
 #project-nav {
   flex-grow: 1;
+  @media (max-width: 1024px) {
+    display: none !important;
+  }
+
   ul {
     margin: 0px;
     list-style-type: none;
     padding-left: 0rem;
+    z-index: 9999;
 
     li {
-      font-size: 0.9rem;
+      font-size: clamp(0.4rem, 0.9rem, 0.9vw);
       cursor: pointer;
       padding: 0.2rem;
 
@@ -170,19 +227,60 @@ footer {
   }
 }
 
+#project-nav-mobile {
+  display: none;
+  flex-grow: 1;
+  position: relative;
+
+  ul {
+    width: 100%;
+    position: absolute;
+    z-index: 9999;
+    left: -0.1rem;
+    top: 2.4rem;
+    display: none;
+    background-color: var(--nord0);
+
+    margin: 0px;
+    list-style-type: none;
+    padding-left: 0rem;
+
+    li {
+      font-size: clamp(0.4rem, 0.9rem, 0.9vw);
+      @media (max-width: 1024px) {
+        font-size: 0.7rem;
+      }
+      cursor: pointer;
+      padding: 0.2rem;
+
+      &:hover {
+        color: var(--nord7);
+        background-color: var(--nord3);
+      }
+    }
+  }
+
+  .mobile-project-list-visible {
+    display: block;
+  }
+}
+
 #skills-nav {
   div {
-    font-size: 0.9rem;
+    font-size: clamp(0.4rem, 0.9rem, 0.9vw);
   }
 }
 
 #contact-nav {
   div {
-    font-size: 0.9rem;
+    font-size: clamp(0.4rem, 0.9rem, 0.9vw);
   }
 }
 
 #content-section {
+  @media (max-width: 1024px) {
+    order: 3;
+  }
   height: 100%;
   overflow-y: auto;
   border: 1px solid var(--nord3);
@@ -199,8 +297,29 @@ footer {
 }
 
 .ascii-header {
-  font-size: 0.9rem;
-  color: var(--nord8);
+  white-space: pre;
+  overflow: hidden;
+  font-size: clamp(2px, 0.7vw, 12px);
+  line-height: 1.2;
+  text-align: center;
+}
+
+.ascii-header-1537 {
+  @media (max-width: 1536px) {
+    display: none;
+  }
+}
+
+.ascii-header-1536 {
+  display: none;
+  @media (max-width: 1536px) {
+    display: block;
+  }
+  white-space: pre;
+  overflow: hidden;
+  font-size: clamp(2px, 0.7vw, 12px);
+  line-height: 1.2;
+  text-align: center;
 }
 
 .divider-dashed {
@@ -269,8 +388,11 @@ footer {
   }
 
   #galaxy-ascii-art {
+    white-space: pre;
+    overflow: hidden;
+    font-size: clamp(2px, 0.7vw, 12px);
+    line-height: 1.2;
     text-align: center;
-    font-size: 0.7rem;
     color: var(--nord7);
   }
 
@@ -289,6 +411,11 @@ footer {
     grid-template-columns: 3fr 1fr;
     grid-template-rows: auto 1fr;
     gap: 1rem;
+
+    @media (max-width: 1280px) {
+      display: flex;
+      flex-direction: column;
+    }
 
     > div {
       position: relative;
@@ -310,6 +437,10 @@ footer {
       grid-column: 1 / span 2;
       grid-row: 1/2;
       border: 1px solid var(--nord7);
+
+      @media (max-width: 1280px) {
+        order: 0;
+      }
 
       .project-hash {
         color: var(--nord13);
@@ -335,6 +466,10 @@ footer {
       border: 1px solid var(--nord7);
       display: flex;
       flex-direction: column;
+
+      @media (max-width: 1280px) {
+        order: 2;
+      }
 
       .project-image-container {
         width: 100%;
@@ -363,6 +498,10 @@ footer {
       grid-column: 2/3;
       grid-row: 2/-1;
       border: 1px solid var(--nord7);
+
+      @media (max-width: 1280px) {
+        order: 1;
+      }
 
       > p {
         color: var(--nord15);
@@ -400,6 +539,10 @@ footer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
+
+    @media (max-width: 1280px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   .skills-category {
@@ -571,6 +714,11 @@ footer {
   #spotify-widget {
     > img {
       min-height: 100px;
+
+      @media (max-width: 1280px) {
+        min-height: 75px;
+        max-height: 75px;
+      }
     }
   }
 
