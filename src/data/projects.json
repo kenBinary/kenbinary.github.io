@@ -17,7 +17,7 @@
             "docker"
         ],
         "github": "https://github.com/kenBinary/trabahuso-frontend",
-        "demo": "https://trabahuso.kjbdev.works/",
+        "demo": null,
         "imageUrl": "/project-demos/trabahuso.webp"
     },
     {
