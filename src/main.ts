@@ -28,7 +28,7 @@ async function generateQuote() {
   }
 }
 
-await generateQuote();
+generateQuote();
 setupSkills();
 setupProjects();
 
