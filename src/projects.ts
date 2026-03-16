@@ -1,10 +1,30 @@
 import projectsData from "./data/projects.json";
 import type { Project } from "./types/projects";
 
+const projectMediaModules = import.meta.glob(
+  "./assets/project-demos/*.{avif,gif,jpg,jpeg,png,webp,mp4,webm}",
+  {
+    eager: true,
+    import: "default",
+  },
+) as Record<string, string>;
+
+function resolveProjectMediaUrl(imageUrl: string): string {
+  const normalized = imageUrl.replace(/\\/g, "/");
+  const fileName = normalized.split("/").pop();
+
+  if (!fileName) return imageUrl;
+
+  const matched = Object.entries(projectMediaModules).find(([modulePath]) =>
+    modulePath.endsWith(`/${fileName}`),
+  );
+
+  return matched?.[1] ?? imageUrl;
+}
+
 export function setupProjects() {
   const projectList = document.querySelector("#project-nav ul");
   const projectListMobile = document.querySelector("#project-nav-mobile ul");
-  console.log(projectListMobile);
   const projectContent = document.getElementById("project-content");
 
   if (!projectList || !projectContent || !projectListMobile) return;
@@ -28,8 +48,8 @@ export function setupProjects() {
     if (description) description.textContent = project.description;
 
     if (imageContainer) {
-      const isVideo =
-        project.imageUrl.endsWith(".webm") || project.imageUrl.endsWith(".mp4");
+      const mediaUrl = resolveProjectMediaUrl(project.imageUrl);
+      const isVideo = mediaUrl.endsWith(".webm") || mediaUrl.endsWith(".mp4");
       const isMobileImage = project.isMobileImage;
 
       imageContainer.classList.toggle(
@@ -38,9 +58,9 @@ export function setupProjects() {
       );
 
       if (isVideo) {
-        imageContainer.innerHTML = `<video src="${project.imageUrl}" autoplay loop muted playsinline"></video>`;
+        imageContainer.innerHTML = `<video src="${mediaUrl}" autoplay loop muted playsinline></video>`;
       } else {
-        imageContainer.innerHTML = `<img src="${project.imageUrl}" alt="${project.name}"" />`;
+        imageContainer.innerHTML = `<img src="${mediaUrl}" alt="${project.name}" />`;
       }
     }
 
