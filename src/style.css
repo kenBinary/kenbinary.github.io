@@ -31,6 +31,7 @@
   src: url("./assets/fonts/HackNerdFontMono-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -38,6 +39,7 @@
   src: url("./assets/fonts/HackNerdFontMono-Bold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -45,6 +47,7 @@
   src: url("./assets/fonts/HackNerdFontMono-Italic.woff2") format("woff2");
   font-weight: normal;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
@@ -52,6 +55,7 @@
   src: url("./assets/fonts/HackNerdFontMono-BoldItalic.woff2") format("woff2");
   font-weight: bold;
   font-style: italic;
+  font-display: swap;
 }
 
 ::-webkit-scrollbar {
