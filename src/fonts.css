@@ -1,0 +1,13 @@
+/*
+ * Hack Nerd Font Family
+ * Font: Hack Nerd
+ * Source: https://www.nerdfonts.com/
+ */
+
+@font-face {
+  font-family: "Hack Nerd Font Mono";
+  src: url("./assets/fonts/HackNerdFontMono-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
