@@ -110,4 +110,22 @@ const mobileProjectList = document.querySelector(
 
 projectNavMobile.addEventListener("click", () => {
   mobileProjectList.classList.toggle("mobile-project-list-visible");
+  window.umami?.track('project-nav-mobile-click');
+});
+
+const homeNav = document.getElementById("home-nav") as HTMLDivElement;
+homeNav.addEventListener("click", () => {
+  window.umami?.track('home-nav-click');
+});
+const projectNav = document.getElementById("project-nav") as HTMLDivElement;
+projectNav.addEventListener("click", () => {
+  window.umami?.track('project-nav-click');
+});
+const skillsNav = document.getElementById("skills-nav") as HTMLDivElement;
+skillsNav.addEventListener("click", () => {
+  window.umami?.track('skills-nav-click');
+});
+const contactNav = document.getElementById("contact-nav") as HTMLDivElement;
+contactNav.addEventListener("click", () => {
+  window.umami?.track('contact-nav-click');
 });

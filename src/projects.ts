@@ -104,6 +104,7 @@ export function setupProjects() {
   projectsData.forEach((project: Project) => {
     const createListItem = () => {
       const li = document.createElement("li");
+      li.setAttribute("data-umami-event", project.id);
       li.textContent = project.name;
 
       li.addEventListener("click", () => {
